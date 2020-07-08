@@ -1,24 +1,25 @@
 import React from 'react';
-import './App.css';
+import { connect } from 'react-redux'
 
-function App() {
+const Page = (props) =>{
   return (
-    <div className="App">
-      <header className="App-header">
- 
-        <p>
-          Iniciando o projeto OLX
 
-          <br/>
-          <br/>
-
-          iM3 Web
-
-        </p>
-        
-      </header>
-    </div>
+    <div>Funcionando...</div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  return {
+    user:state.user
+  };
+}
+
+const mapDispatchToProps = (dispatch) =>{
+  return{
+
+
+  };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps) (Page);
