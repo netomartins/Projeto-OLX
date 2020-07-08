@@ -1,25 +1,28 @@
-import React from 'react';
-import { connect } from 'react-redux'
+import React from "react";
+import { connect } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./Routes";
 
-const Page = (props) =>{
+const Page = (props) => {
   return (
+    <BrowserRouter>
 
-    <div>Funcionando...</div>
+
+      <Routes />
+
+      
+    </BrowserRouter>
   );
-}
+};
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
-    user:state.user
+    user: state.user,
   };
-}
+};
 
-const mapDispatchToProps = (dispatch) =>{
-  return{
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
 
-
-  };
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps) (Page);
+export default connect(mapStateToProps, mapDispatchToProps)(Page);
